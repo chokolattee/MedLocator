@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedLocator - Find Specialized Healthcare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MedLocator</h1>
+                <p>Find specialized healthcare near you</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" id="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <h2>Find Hospitals Specializing In</h2>
+            <div class="search-box">
+                <div class="search-input">
+                    <input type="text" id="disease-search" placeholder="Enter disease or condition (e.g. diabetes, cancer)">
+                    <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label for="location-filter">Location:</label>
+                        <select id="location-filter">
+                            <option value="all">All Locations</option>
+                            <option value="near-me">Near Me</option>
+                            <option value="metro-manila">Metro Manila</option>
+                            <option value="cebu">Cebu</option>
+                            <option value="davao">Davao</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-by">Sort By:</label>
+                        <select id="sort-by">
+                            <option value="distance">Distance</option>
+                            <option value="rating">Rating</option>
+                            <option value="name">Name</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="disease-categories">
+            <h3>Common Conditions</h3>
+            <div class="categories-grid">
+                <button class="category-btn" data-disease="diabetes">Diabetes</button>
+                <button class="category-btn" data-disease="heart disease">Heart Disease</button>
+                <button class="category-btn" data-disease="cancer">Cancer</button>
+                <button class="category-btn" data-disease="asthma">Asthma</button>
+                <button class="category-btn" data-disease="arthritis">Arthritis</button>
+                <button class="category-btn" data-disease="kidney disease">Kidney Disease</button>
+            </div>
+        </section>
+
+        <section class="results-section" id="results-section">
+            <div class="results-header">
+                <h3 id="results-title">Search Results</h3>
+                <p id="results-count">0 hospitals found</p>
+            </div>
+            <div class="results-list" id="results-list">
+                <!-- Results will be populated here by JavaScript -->
+                <div class="no-results">
+                    <i class="fas fa-hospital"></i>
+                    <p>Search for a disease or condition to find specialized hospitals</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>MedLocator</h4>
+                    <p>Helping patients find specialized healthcare since 2023.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@MedLocator.com</p>
+                    <p>Phone: +63 123 456 7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MedLocator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
